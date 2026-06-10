@@ -1,0 +1,23 @@
+# AWS Configuration
+aws_region  = "ap-northeast-1"
+aws_profile = "default"
+
+# Environment (dev, staging, prod)
+environment = "dev"
+
+# Availability Zones (must match the region above)
+availability_zones = ["ap-northeast-1a", "ap-northeast-1c", "ap-northeast-1d"]
+
+# ECS Configuration
+ecs_cpu       = 4096  # 4 vCPU
+ecs_memory    = 8192  # 8 GB
+desired_count = 1
+
+# RDS Configuration
+db_instance_class = "db.t3.micro"
+db_username       = "litellm"
+db_password       = "CHANGE_ME_to_a_strong_password"
+
+# LiteLLM Configuration (must start with sk-)
+litellm_master_key = "sk-CHANGE_ME"
+litellm_salt_key   = "sk-CHANGE_ME"
